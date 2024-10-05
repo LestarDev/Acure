@@ -4,7 +4,7 @@ import PageType, { getPageName } from "../../types/PageType"
 const Login = ({setPage}: PageType) => {
 
     return <div>
-        <PageButton pageName="Home" setPage={setPage}  />
+        <PageButton pageName="Strona Główna" setPage={setPage}  />
     </div>
 }
 
