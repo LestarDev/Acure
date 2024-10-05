@@ -1,0 +1,34 @@
+import tupleBuilder from "../shared/touplesBuilder";
+
+type SetPageType = React.Dispatch<React.SetStateAction<number>>;
+
+type PageType = {
+    setPage: SetPageType,
+    pageNr?: number
+}
+
+type pageName = string;
+
+// export type AdvancedPageType<T> = {[Key in keyof PageType as PageType[Key] extends Required<PageType>[Key] ? Key : "pageNr"]-?: PageType[Key]} & T
+
+type ChangeToPageName<val> = {[key in keyof val as val[key] extends PageType['pageNr'] ? 'pageName' : key]: val[key]}
+type possiblePagesNamesType = "Home" | "Login";
+
+
+export type AdvancedPageType<T, isPageName = false> = isPageName extends true ? 
+    T & {[Key in keyof PageType as PageType[Key] extends PageType['pageNr'] ? 'pageName' : Key]-?: PageType[Key] extends PageType['pageNr'] ? possiblePagesNamesType : PageType[Key]} : 
+    T & {[Key in keyof PageType]-?: PageType[Key]}
+
+
+const possiblePagesNames = tupleBuilder<possiblePagesNamesType>().add("Home").add("Login").build();
+
+export const getPageName = (pageNr: number) => possiblePagesNames[pageNr];
+
+export const getPageNumber = (pageName: possiblePagesNamesType): number => {
+    possiblePagesNames.forEach((el, indx)=>{
+        if(el==pageName) return indx;
+    })
+    return 0;
+}
+
+export default PageType
