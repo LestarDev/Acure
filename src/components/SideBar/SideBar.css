@@ -1,0 +1,21 @@
+.duelsButton{
+    display: flex;
+    gap: 0.5rem;
+    align-items: center;
+}
+
+.circle{
+    background: var(--gradient-background-color);
+    border: 1px solid var(--sub-background-color);
+    border-radius: 90px;
+}
+
+.big{
+    width: 16px;
+    height: 16px;
+}
+
+.small{
+    width: 8px;
+    height: 8px;
+}

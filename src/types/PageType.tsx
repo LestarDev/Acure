@@ -12,7 +12,7 @@ type pageName = string;
 // export type AdvancedPageType<T> = {[Key in keyof PageType as PageType[Key] extends Required<PageType>[Key] ? Key : "pageNr"]-?: PageType[Key]} & T
 
 type ChangeToPageName<val> = {[key in keyof val as val[key] extends PageType['pageNr'] ? 'pageName' : key]: val[key]}
-type possiblePagesNamesType = "Strona Główna" | "Voucher" | "Sklep" | "Login" | "Dołącz do Gry";
+export type possiblePagesNamesType = "Strona Główna" | "Voucher" | "Sklep" | "Login" | "DOŁĄCZ DO GRY" | "Duels";
 
 
 export type AdvancedPageType<T, isPageName = false> = isPageName extends true ? 
@@ -20,7 +20,7 @@ export type AdvancedPageType<T, isPageName = false> = isPageName extends true ?
     T & {[Key in keyof PageType]-?: PageType[Key]}
 
 
-const possiblePagesNames = tupleBuilder<possiblePagesNamesType>().add("Strona Główna").add("Voucher").add("Sklep").add("Login").add("Dołącz do Gry").build();
+const possiblePagesNames = tupleBuilder<possiblePagesNamesType>().add("Strona Główna").add("Voucher").add("Sklep").add("Login").add("DOŁĄCZ DO GRY").add("Duels").build();
 
 export const getPageName = (pageNr: number) => {
     console.log('getPageName:', pageNr, possiblePagesNames[pageNr])

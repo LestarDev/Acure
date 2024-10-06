@@ -1,5 +1,7 @@
 #main{
     padding: 0 var(--inner-padding);
+    display: flex;
+    justify-content: space-between;
 }
 
 main{
@@ -10,7 +12,7 @@ main{
 
 main span.primary{
     color: var(--dark-color);
-    font-family: "dharma-gothic-c", sans-serif;
+    font-family: "dharma-gothic-e", sans-serif;
     font-weight: bold;
     font-style: normal;
     font-size: 24pt;

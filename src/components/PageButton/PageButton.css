@@ -1,9 +1,11 @@
-button{
-    background: var(--background-color);
+button:has(span){
+    background-color: var(--background-color);
+    transition: all 0.5s;
 }
 
-button:hover{
-    border-color: var(--main-color);
+button:has(span):hover{
+    /* border-color: var(--main-color); */
+    box-shadow: inset 0px 0px 5px 1px var(--background-color);
 }
 
 button:has(svg){
@@ -24,8 +26,12 @@ button.primary:hover{
 }
 
 button.primary *{
-    
+    text-transform: uppercase;
     color: white;
+}
+
+button.secondary:has(svg){
+    flex-direction: row-reverse;
 }
 
 button.secondary{
@@ -37,7 +43,7 @@ button.secondary{
 button.primary, button.secondary{
     border-radius: 90px;
     padding: 0.5rem 2rem;
-    text-transform: uppercase;
+    
     font-family: "Poppins", sans-serif;
 }
 
