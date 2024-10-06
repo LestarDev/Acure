@@ -9,7 +9,11 @@ const NoSliderCommponent = ({ name, text, icon}: {
     return <div>
         {
             isWithApi(name) ? <>
-                api
+                <div>
+                    <span>{name}</span>
+                    {icon}
+                </div>
+                [api]
             </> : <>
                 <span>{name}</span>
                 <span>{text}</span>

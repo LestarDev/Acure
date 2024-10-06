@@ -7,6 +7,8 @@ import SpaceGiver from "../../components/SpaceGiver/SpaceGiver"
 import SideBar from "../../components/SideBar/SideBar"
 import NoSliderCommponent from "../../components/NoSlidderCommponent/NoSliderCommponent"
 import ServersType from "../../types/ServersType"
+import { TbBrandMinecraft } from "react-icons/tb"
+import { GiCrossedSwords } from "react-icons/gi"
 
 const Home = ({setPage}: PageType) => {
 
@@ -32,7 +34,11 @@ const Home = ({setPage}: PageType) => {
             </aside>
         </div>
         <div className="noSlider">
-            <NoSliderCommponent name={"Duels" as ServersType} />
+            <NoSliderCommponent name={"Duels" as ServersType} icon={<GiCrossedSwords />}/>
+            <NoSliderCommponent name={"OneBlock+" as ServersType} icon={<TbBrandMinecraft />} />
+            <NoSliderCommponent name="24/7 Support" text="Aktywna Administracja" />
+            <NoSliderCommponent name="Aktualizacje" text="Regularne Nowości!" />
+            <NoSliderCommponent name="Start" text="10.10.2024" />
         </div>
         <PageButton setPage={setPage} pageName={"Login"} isPrimary={true} />
     </>

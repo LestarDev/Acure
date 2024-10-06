@@ -42,3 +42,14 @@ main > div{
     display: flex;
     gap: 1rem;
 }
+
+.noSlider{
+    padding: 0 var(--inner-padding);
+    display: flex;
+    justify-content: space-between;
+}
+
+.noSlider > div{
+    display: flex;
+    flex-direction: column;
+}
