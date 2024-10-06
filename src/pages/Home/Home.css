@@ -1,0 +1,42 @@
+#main{
+    padding: 0 var(--inner-padding);
+}
+
+main{
+    display: flex;
+    flex-direction: column;
+    max-width: 50%;
+}
+
+main span.primary{
+    color: var(--dark-color);
+    font-family: "dharma-gothic-c", sans-serif;
+    font-weight: bold;
+    font-style: normal;
+    font-size: 24pt;
+}
+
+main p{
+    font-family: "termina", sans-serif;
+    font-weight: bold;
+    font-style: normal;
+    font-size: 36pt;
+    margin: 0;
+}
+
+main p span{
+    color: var(--main-color);
+}
+
+main p + span{
+    font-size: 16pt;
+    font-family: "Poppins", sans-serif;
+    color: var(--text-color);
+    margin: 2rem 0;
+    font-weight: 300;
+}
+
+main > div{
+    display: flex;
+    gap: 1rem;
+}

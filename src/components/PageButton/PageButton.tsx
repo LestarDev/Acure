@@ -1,5 +1,6 @@
 import { IconType } from "react-icons";
-import { AdvancedPageType, getPageName, getPageNumber } from "../../types/PageType"
+import { AdvancedPageType, getPageNumber } from "../../types/PageType"
+import "./PageButton.css"
 
 const PageButton = ({setPage, pageName, isPrimary, icon}:AdvancedPageType<{
     isPrimary?: boolean,
@@ -9,15 +10,18 @@ const PageButton = ({setPage, pageName, isPrimary, icon}:AdvancedPageType<{
 
     const pageNr = getPageNumber(pageName);
 
-    return <button className={isPrimary ? "primary" : ""} onClick={()=>{
+    return <button className={isPrimary ? "primary" : isPrimary==false ? "secondary" : ""} onClick={()=>{
         setPage(pageNr)
     }}>
         {
             icon ? icon : ''
         }
-    {
-        getPageName(pageNr)
-    }
+        <span>
+        {
+            pageName
+        }
+        </span>
+    
     </button>
 }
 

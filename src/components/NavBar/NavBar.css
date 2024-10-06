@@ -1,0 +1,38 @@
+nav{
+    padding: 0 var(--inner-padding);
+}
+
+ul{
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    padding: 0;
+    margin: 0;
+    align-items: center;
+}
+
+ul > div{
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+ul img{
+    width: clamp(91px, 7rem, 10rem);
+}
+
+@media only screen and (max-width: 1280px) {
+    ul > div li:first-child button span{
+        display: none;
+    }
+
+    ul img{
+        width: clamp(91px, 5rem, 7rem);
+    }
+}
+
+@media only screen and (max-width: 780px) {
+    ul > div li button span{
+        display: none;
+    }
+}

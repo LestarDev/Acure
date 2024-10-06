@@ -12,7 +12,7 @@ function App() {
       {
         pageNr==0 ? <Home setPage={setPage} pageNr={pageNr} /> :
         pageNr==1 ? <Login setPage={setPage} /> :
-        'Error'
+        `Error ${pageNr}`
       }
     </>
   )

@@ -1,0 +1,43 @@
+button{
+    background: var(--background-color);
+}
+
+button:hover{
+    border-color: var(--main-color);
+}
+
+button:has(svg){
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+button.primary{
+    background: var(--dark-color);
+    background: linear-gradient(90deg, var(--dark-color) 0%, var(--main-color) 100%);
+    
+    
+}
+
+button.primary:hover{
+    border-color: var(--background-color);
+}
+
+button.primary *{
+    
+    color: white;
+}
+
+button.secondary{
+    border: 1px solid var(--sub-background-color);
+    background: var(--gradient-background-color);
+    color: var(--text-color);
+}
+
+button.primary, button.secondary{
+    border-radius: 90px;
+    padding: 0.5rem 2rem;
+    text-transform: uppercase;
+    font-family: "Poppins", sans-serif;
+}
+
