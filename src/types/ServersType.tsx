@@ -8,4 +8,11 @@ const isWithApiTest = (name: string): number => servers.indexOf(name as any) ?? 
 
 export const isWithApi = (name: string): boolean => isWithApiTest(name)!=-1
 
+export type setServerStatus<status extends boolean, extraMessage = false> = status extends true ? {"howManyPlayers": number} : extraMessage extends true ? {"specialMessage": string} : {"specialMessage": "offline"};
+
+export type serverStatusSimple = {
+    howManyPlayers?: number,
+    specialMessage?: string
+}
+
 export default ServersType

@@ -8,6 +8,7 @@ main{
     display: flex;
     flex-direction: column;
     max-width: 50%;
+    justify-content: end;
 }
 
 main span.primary{
@@ -52,4 +53,5 @@ main > div{
 .noSlider > div{
     display: flex;
     flex-direction: column;
+    font-family: "Poppins", sans-serif;
 }

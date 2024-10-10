@@ -33,14 +33,15 @@ const Home = ({setPage}: PageType) => {
                 <SideBar setPage={setPage} />
             </aside>
         </div>
+        <SpaceGiver padding={"5rem 0"} />
         <div className="noSlider">
-            <NoSliderCommponent name={"Duels" as ServersType} icon={<GiCrossedSwords />}/>
-            <NoSliderCommponent name={"OneBlock+" as ServersType} icon={<TbBrandMinecraft />} />
+            <NoSliderCommponent name={"Duels" as ServersType} icon={<GiCrossedSwords />} ip="93.95.119.179:25570"/>
+            <NoSliderCommponent name={"OneBlock+" as ServersType} icon={<TbBrandMinecraft />} ip={1} />
             <NoSliderCommponent name="24/7 Support" text="Aktywna Administracja" />
             <NoSliderCommponent name="Aktualizacje" text="Regularne Nowości!" />
             <NoSliderCommponent name="Start" text="10.10.2024" />
         </div>
-        <PageButton setPage={setPage} pageName={"Login"} isPrimary={true} />
+        {/* <PageButton setPage={setPage} pageName={"Login"} isPrimary={true} /> */}
     </>
 }
 

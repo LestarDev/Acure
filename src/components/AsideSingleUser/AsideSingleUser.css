@@ -1,0 +1,25 @@
+.singleAsideUser, .singleAsideUser div{
+    display: flex;
+    justify-content: space-between;
+}
+
+.singleAsideUser > div{
+    flex-direction: column;
+}
+
+.singleAsideUser span{
+    font-family: "Poppins", sans-serif;
+    font-size: 10pt;
+}
+
+.singleAsideUser span:first-child{
+    font-weight: bold;
+}
+
+.singleAsideUser span + span{
+    font-weight: 100;
+}
+
+.singleAsideUser img{
+    border-radius: 10px;
+}

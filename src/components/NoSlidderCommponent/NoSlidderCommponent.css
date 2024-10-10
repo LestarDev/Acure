@@ -1,0 +1,15 @@
+.noSlider .single > div{
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.noSlider .single span{
+    font-weight: bold;
+}
+
+
+.noSlider .single * + span{
+    font-weight: 100;
+}
+
