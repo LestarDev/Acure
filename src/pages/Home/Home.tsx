@@ -21,7 +21,7 @@ const Home = ({setPage}: PageType) => {
 
     return <>
         <NavBar setPage={setPage} />
-        <SpaceGiver padding={"5rem 0"} />
+        {/* <SpaceGiver padding={"5rem 0"} /> */}
         <div id="main">
             <main>
                 <span className="primary">ACURE.PL</span>
@@ -40,7 +40,7 @@ const Home = ({setPage}: PageType) => {
                 <SideBar setPage={setPage} />
             </aside>
         </div>
-        <SpaceGiver padding={"5rem 0"} />
+        {/* <SpaceGiver padding={"5rem 0"} /> */}
         <div className="noSlider">
             <NoSliderCommponent name={"Duels" as ServersType} icon={<GiCrossedSwords />} ip={ips["duels"]}/>
             <NoSliderCommponent name={"OneBlock+" as ServersType} icon={<TbBrandMinecraft />} ip={1} />
