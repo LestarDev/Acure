@@ -9,8 +9,15 @@ import NoSliderCommponent from "../../components/NoSlidderCommponent/NoSliderCom
 import ServersType from "../../types/ServersType"
 import { TbBrandMinecraft } from "react-icons/tb"
 import { GiCrossedSwords } from "react-icons/gi"
+import { useState } from "react"
 
 const Home = ({setPage}: PageType) => {
+
+    const [ips, setIPs] = useState({} as {[Key: string]: string});
+
+    fetch("http://127.0.0.1:5000/ip_duels/").then(res=>res.text()).then((data: string)=>setIPs({
+        duels: data
+    }));
 
     return <>
         <NavBar setPage={setPage} />
@@ -35,7 +42,7 @@ const Home = ({setPage}: PageType) => {
         </div>
         <SpaceGiver padding={"5rem 0"} />
         <div className="noSlider">
-            <NoSliderCommponent name={"Duels" as ServersType} icon={<GiCrossedSwords />} ip="93.95.119.179:25570"/>
+            <NoSliderCommponent name={"Duels" as ServersType} icon={<GiCrossedSwords />} ip={ips["duels"]}/>
             <NoSliderCommponent name={"OneBlock+" as ServersType} icon={<TbBrandMinecraft />} ip={1} />
             <NoSliderCommponent name="24/7 Support" text="Aktywna Administracja" />
             <NoSliderCommponent name="Aktualizacje" text="Regularne Nowości!" />

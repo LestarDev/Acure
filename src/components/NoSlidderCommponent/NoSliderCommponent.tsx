@@ -41,7 +41,13 @@ const NoSliderCommponent = ({ name, text, icon, ip}: {
                 </div>
                 <span>
                 {
-                    typeof status.howManyPlayers != "undefined" ? <>Online {status.howManyPlayers} graczy</> : status.specialMessage ? status.specialMessage : "Offline"
+                    typeof status.howManyPlayers != "undefined" ? 
+                    status.howManyPlayers>1 ? 
+                    <>Online {status.howManyPlayers} graczy</> : 
+                    <>Online {status.howManyPlayers} gracz</> : 
+                    status.specialMessage ? 
+                    status.specialMessage : 
+                    "Offline"
                 }
                 </span>
                 
