@@ -1,0 +1,51 @@
+span.primary{
+    color: var(--dark-color);
+    font-family: "dharma-gothic-e", sans-serif;
+    font-weight: bold;
+    font-style: normal;
+    font-size: 24pt;
+}
+
+section{
+    padding: 5rem var(--inner-padding);
+}
+
+p{
+    font-family: "termina", sans-serif;
+    font-weight: bold;
+    font-style: normal;
+    font-size: 36pt;
+    margin: 0;
+}
+
+p span{
+    color: var(--main-color);
+}
+
+form{
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+form input{
+    background: var(--gradient-background-color);
+    border: 1px solid var(--background-color);
+    padding: 1rem;
+    border-radius: 90px;
+    font-family: "Poppins", sans-serif;
+    font-weight: 500;
+}
+
+input.primary{
+    background: var(--gradient-primary-color);
+    border: 1px solid var(--background-color);
+    padding: 1rem;
+    border-radius: 90px;
+    font-family: "Poppins", sans-serif;
+    font-weight: 500;
+}
+
+footer span.primary{
+    color: var(--main-color)
+}

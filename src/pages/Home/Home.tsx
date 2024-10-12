@@ -10,6 +10,9 @@ import ServersType from "../../types/ServersType"
 import { TbBrandMinecraft } from "react-icons/tb"
 import { GiCrossedSwords } from "react-icons/gi"
 import { useState } from "react"
+import VoucherSection from "../../components/VoucherSection/VoucherSection"
+import Line from "../../components/Line/Line"
+import Footer from "../../components/Footer/Footer"
 
 const Home = ({setPage}: PageType) => {
 
@@ -48,6 +51,9 @@ const Home = ({setPage}: PageType) => {
             <NoSliderCommponent name="Aktualizacje" text="Regularne Nowości!" />
             <NoSliderCommponent name="Start" text="10.10.2024" />
         </div>
+        <VoucherSection />
+        <Line setPage={setPage} isWithSection={true} />
+        <Footer />
         {/* <PageButton setPage={setPage} pageName={"Login"} isPrimary={true} /> */}
     </>
 }

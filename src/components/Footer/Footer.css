@@ -1,0 +1,31 @@
+footer{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+footer > div{
+    display: flex;
+    width: 100%;
+    justify-content: space-evenly;
+}
+
+footer > div > div{
+    display: flex;
+    align-items: start;
+    gap: 1rem;
+}
+
+footer > div > div > div{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    height: 100%;
+}
+
+footer .separator{
+    width: 1px;
+    height: auto;
+    padding: 1rem 0;
+    background: var(--main-color);
+}

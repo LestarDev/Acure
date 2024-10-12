@@ -4,7 +4,7 @@ button:has(span){
 }
 
 button:has(span):hover{
-    /* border-color: var(--main-color); */
+    border-color: var(--main-color);
     box-shadow: inset 0px 0px 5px 1px var(--background-color);
 }
 
@@ -16,8 +16,7 @@ button:has(svg){
 
 button.primary{
     background: var(--dark-color);
-    background: linear-gradient(90deg, var(--dark-color) 0%, var(--main-color) 100%);
-    
+    background: var(--gradient-primary-color);
     
 }
 

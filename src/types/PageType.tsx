@@ -1,6 +1,6 @@
 import tupleBuilder from "../shared/touplesBuilder";
 
-type SetPageType = React.Dispatch<React.SetStateAction<number>>;
+export type SetPageType = React.Dispatch<React.SetStateAction<number>>;
 
 type PageType = {
     setPage: SetPageType,

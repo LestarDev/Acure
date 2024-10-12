@@ -6,18 +6,16 @@ import { FaCartShopping, FaFacebook } from "react-icons/fa6";
 import { IoPerson } from "react-icons/io5";
 import { FaDiscord, FaInstagram, FaTiktok } from "react-icons/fa";
 import { discordURL, facebookURL, instagramURL, tiktokURL } from "../../config/main";
-import acureLogo from "./../../assets/acureLogo.webp";
+
 import './NavBar.css'
+import Logo from "../Logo/Logo";
 
 const NavBar = ({setPage}: PageType) => {
 
     return <nav>
         <ul>
             <li>
-                <picture>
-                    <source srcSet={acureLogo} type="image/webp" />
-                    <img src="logo.png" alt="logo" />
-                </picture>
+                <Logo />
             </li>
             <div>
                 <li>
