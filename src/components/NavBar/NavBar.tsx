@@ -52,6 +52,22 @@ const NavBar = ({setPage}: PageType) => {
                         <FaDiscord />
                     </a>
                 </li>
+                <input type="checkbox" name="menu" id="menu" />
+                <label htmlFor="menu"></label>
+                <div>
+                    <li>
+                        <PageButton pageName="Strona Główna" setPage={setPage} icon={<TiHome />} />
+                    </li>
+                    <li>
+                        <PageButton pageName="Voucher" setPage={setPage} icon={<HiTicket />} />
+                    </li>
+                    <li>
+                        <PageButton pageName="Sklep" setPage={setPage} icon={<FaCartShopping />} />
+                    </li>
+                    <li>
+                        <PageButton pageName="Login" setPage={setPage} icon={<IoPerson />} />
+                    </li>
+                </div>
             </div>
         </ul>
     </nav>

@@ -12,7 +12,7 @@ const SideBar = ({setPage}: PageType) => {
 
     useEffect(()=>{
         fetch("http://127.0.0.1:5000/global_elo/").then(response=>response.json()).then((data: any[])=>{
-            console.log(data);
+            // console.log(data);
             setUserUsefulData([]);
             data.forEach((el)=>{
                 setUserUsefulData(prevV=>[...prevV, {

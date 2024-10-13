@@ -1,5 +1,5 @@
 .voucherSection form{
-    max-width: 50%;
+    max-width: 70%;
 }
 
 .voucherSection{
@@ -31,4 +31,15 @@
 
 .ipData span:not(:first-child){
     font-weight: 200;
+}
+
+@media only screen and (max-width: 780px) {
+    .voucherSection{
+        flex-direction: column;
+        gap: 3rem;
+    }
+
+    .ipData .primary{
+        font-size: 80pt;
+    }
 }

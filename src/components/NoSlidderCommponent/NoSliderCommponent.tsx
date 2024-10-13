@@ -23,7 +23,7 @@ const NoSliderCommponent = ({ name, text, icon, ip}: {
         fetch(`https://api.mcsrvstat.us/3/${ip}`)
         .then(response=>response.json())
         .then((data: any)=>{
-            console.log(data);
+            // console.log(data);
             setStatus(data.online ? {
                 howManyPlayers: data.players.online
             } as setServerStatus<true> : {
