@@ -1,0 +1,31 @@
+h1{
+    color: var(--main-color);
+    text-align: center;
+}
+
+p{
+    font-size: 18pt;
+    padding: var(--inner-padding);
+}
+
+ol{
+    padding: 0 var(--inner-padding);
+}
+
+ol li{
+    padding: 1rem 0;
+}
+
+ol ul{
+    flex-direction: column;
+    align-items: self-start;
+}
+
+ol[type="I"] > li::marker{
+    color: var(--dark-color);
+    font-size: 24pt;
+}
+
+*::marker{
+    color: var(--main-color);
+}

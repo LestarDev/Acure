@@ -8,7 +8,7 @@ import NoSliderCommponent from "../../components/NoSlidderCommponent/NoSliderCom
 import ServersType from "../../types/ServersType"
 import { TbBrandMinecraft } from "react-icons/tb"
 import { GiCrossedSwords } from "react-icons/gi"
-import { useState } from "react"
+import { useEffect, useState } from "react"
 import VoucherSection from "../../components/VoucherSection/VoucherSection"
 import Line from "../../components/Line/Line"
 import Footer from "../../components/Footer/Footer"
@@ -17,9 +17,11 @@ const Home = ({setPage}: PageType) => {
 
     const [ips, setIPs] = useState({} as {[Key: string]: string});
 
-    fetch("http://127.0.0.1:5000/ip_duels/").then(res=>res.text()).then((data: string)=>setIPs({
-        duels: data
-    }));
+    useEffect(()=>{
+        fetch("http://127.0.0.1:5000/ip_duels/").then(res=>res.text()).then((data: string)=>setIPs({
+            duels: data
+        }));
+    },[])
 
     return <>
         <NavBar setPage={setPage} />
