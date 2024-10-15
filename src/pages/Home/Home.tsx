@@ -3,7 +3,6 @@ import NavBar from "../../components/NavBar/NavBar"
 import PageButton from "../../components/PageButton/PageButton"
 import PageType from "../../types/PageType"
 import "./Home.css"
-import SpaceGiver from "../../components/SpaceGiver/SpaceGiver"
 import SideBar from "../../components/SideBar/SideBar"
 import NoSliderCommponent from "../../components/NoSlidderCommponent/NoSliderCommponent"
 import ServersType from "../../types/ServersType"
@@ -53,7 +52,7 @@ const Home = ({setPage}: PageType) => {
         </div>
         <VoucherSection />
         <Line setPage={setPage} isWithSection={true} />
-        <Footer />
+        <Footer setPage={setPage} />
         {/* <PageButton setPage={setPage} pageName={"Login"} isPrimary={true} /> */}
     </>
 }

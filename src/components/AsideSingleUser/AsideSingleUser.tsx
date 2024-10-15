@@ -1,4 +1,3 @@
-import { useEffect, useState } from "react"
 import UuidType from "../../types/UuidType"
 import "./AsideSingleUser.css"
 

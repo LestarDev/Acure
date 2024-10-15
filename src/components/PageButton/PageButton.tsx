@@ -1,4 +1,3 @@
-import { IconType } from "react-icons";
 import { AdvancedPageType, getPageNumber, possiblePagesNamesType } from "../../types/PageType"
 import "./PageButton.css"
 

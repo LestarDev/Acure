@@ -9,7 +9,7 @@ type PageType = {
 
 // export type AdvancedPageType<T> = {[Key in keyof PageType as PageType[Key] extends Required<PageType>[Key] ? Key : "pageNr"]-?: PageType[Key]} & T
 
-type ChangeToPageName<val> = {[key in keyof val as val[key] extends PageType['pageNr'] ? 'pageName' : key]: val[key]}
+// type ChangeToPageName<val> = {[key in keyof val as val[key] extends PageType['pageNr'] ? 'pageName' : key]: val[key]}
 export type possiblePagesNamesType = "Strona Główna" | "Voucher" | "Sklep" | "Login" | "DOŁĄCZ DO GRY" | "Duels";
 
 

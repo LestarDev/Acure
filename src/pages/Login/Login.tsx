@@ -1,5 +1,5 @@
 import PageButton from "../../components/PageButton/PageButton"
-import PageType, { getPageName } from "../../types/PageType"
+import PageType from "../../types/PageType"
 
 const Login = ({setPage}: PageType) => {
 

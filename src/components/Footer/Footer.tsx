@@ -1,5 +1,5 @@
 import { discordURL, facebookURL, instagramURL, tiktokURL } from "../../config/main"
-import PageType, { SetPageType } from "../../types/PageType"
+import PageType from "../../types/PageType"
 import Line from "../Line/Line"
 import Logo from "../Logo/Logo"
 import "./Footer.css"
